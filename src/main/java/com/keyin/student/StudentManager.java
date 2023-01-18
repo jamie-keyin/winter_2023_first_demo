@@ -21,4 +21,17 @@ public class StudentManager {
         return studentList;
     }
 
+    public Student findMatchingStudent(Student studentToFind) {
+        if (studentList.contains(studentToFind)) {
+
+            for (Student student : studentList) {
+                if (student.equals(studentToFind)) {
+                    return student;
+                }
+            }
+        }
+
+        return null;
+    }
+
 }
