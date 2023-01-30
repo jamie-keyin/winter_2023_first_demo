@@ -4,24 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentManager {
-
-    private List<Student> studentList = new ArrayList<Student>();
-
-    public StudentManager() {
-        Student firstStudent = new Student();
-        firstStudent.setId(1);
-        firstStudent.setFirstName("Jamie");
-        firstStudent.setLastName("Cornick");
-        firstStudent.setAddress("1234 Street");
-
-        studentList.add(firstStudent);
-    }
+    private StudentDataSource studentDataSource;
 
     public List<Student> getAllStudents() {
-        return studentList;
+        return studentDataSource.getAllStudents();
     }
 
     public Student findMatchingStudent(Student studentToFind) {
+        List<Student> studentList = studentDataSource.getAllStudents();
+
         if (studentList.contains(studentToFind)) {
 
             for (Student student : studentList) {
@@ -32,6 +23,14 @@ public class StudentManager {
         }
 
         return null;
+    }
+
+    public StudentDataSource getStudentDataSource() {
+        return studentDataSource;
+    }
+
+    public void setStudentDataSource(StudentDataSource studentDataSource) {
+        this.studentDataSource = studentDataSource;
     }
 
 }
