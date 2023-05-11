@@ -20,7 +20,7 @@ public class StudentManagerTest {
     private StudentDataSource studentDataSourceMock;
 
     @Test
-    public void testGetAllStudents() {
+    public void _testGetAllStudents() {
         Student student1 = new Student();
         student1.setId(1);
         student1.setFirstName("Jamie");
@@ -69,7 +69,7 @@ public class StudentManagerTest {
         Assertions.assertTrue(result);
     }
     @Test
-    public void testFindMatchingStudent() {
+    public void _testFindMatchingStudent() {
         Student student1 = new Student();
         student1.setId(1);
         student1.setFirstName("Jamie");
