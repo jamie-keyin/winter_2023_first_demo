@@ -22,6 +22,10 @@ public class StudentManager {
             }
         }
 
+        System.out.println("Testing");
+
+        System.out.println("Testing");
+
         return null;
     }
 
